@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<Pane id="displayPane" fx:id="displayPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="407.0" prefWidth="609.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.paintsprint.paintFunctions">
+    <children>
+      <StackPane id="stackPane" fx:id="stackPane" prefHeight="407.0" prefWidth="609.0" />
+      <ImageView id="displayFile" fx:id="displayFile" fitHeight="384.0" fitWidth="609.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
+      <AnchorPane fx:id="anchorPane" layoutX="-2.0" layoutY="30.0" prefHeight="384.0" prefWidth="617.0">
+         <children>
+            <Canvas id="canvas" fx:id="canvas" height="384.0" width="595.0" />
+         </children>
+      </AnchorPane>
+        <HBox fx:id="HBox" layoutX="543.0" layoutY="-1.0" prefHeight="26.0" prefWidth="69.0">
+         <children>
+            <Button fx:id="exitButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="66.0" text="Exit" />
+         </children></HBox>
+        <ColorPicker id="colorPicker" fx:id="colorPicker" editable="true" layoutX="99.0" layoutY="1.0" prefHeight="26.0" prefWidth="99.0">
+            <value>
+                <Color />
+            </value>
+        </ColorPicker>
+      <Slider id="widthSlider" fx:id="widthSlider" layoutX="7.0" layoutY="48.0" orientation="VERTICAL" />
+      <Text id="widthText" fx:id="widthText" layoutX="4.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1px" />
+      <MenuBar id="menuBar" layoutY="1.0" prefHeight="26.0" prefWidth="99.0">
+         <menus>
+            <Menu id="fileMenu" mnemonicParsing="false" text="File">
+              <items>
+                  <MenuItem fx:id="selectFile" mnemonicParsing="false" text="Select File" />
+                <MenuItem fx:id="saveButton" mnemonicParsing="false" text="Save" />
+                  <MenuItem fx:id="saveAsButton" mnemonicParsing="false" text="Save As" />
+              </items>
+            </Menu>
+            <Menu id="helpMenu" mnemonicParsing="false" text="Help">
+              <items>
+                <MenuItem fx:id="aboutButton" mnemonicParsing="false" text="About" />
+              </items>
+            </Menu>
+         </menus></MenuBar>
+      <MenuButton id="shapeSelector" fx:id="shapeSelector" layoutX="198.0" layoutY="1.0" mnemonicParsing="false" text="Select Shape">
+        <items>
+          <MenuItem fx:id="lineSelect" mnemonicParsing="false" text="Line" />
+          <MenuItem fx:id="rectangleSelect" mnemonicParsing="false" text="Rectangle" />
+            <MenuItem fx:id="ellipseSelect" mnemonicParsing="false" text="Ellipse" />
+            <MenuItem fx:id="triangleSelect" mnemonicParsing="false" text="Triangle" />
+            <MenuItem fx:id="circleSelect" mnemonicParsing="false" text="Circle" />
+            <MenuItem id="squareSelect" mnemonicParsing="false" text="Square" />
+            <MenuItem fx:id="straightSelect" mnemonicParsing="false" text="Straight Line" />
+        </items>
+      </MenuButton>
+      <CheckBox id="dashToggle" fx:id="dashToggle" layoutX="304.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="99.0" text="Dashed Line" />
+      <Button id="eyeDropper" fx:id="eyeDropper" layoutX="404.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="86.0" text="Eyedropper" />
+    </children>
+</Pane>
